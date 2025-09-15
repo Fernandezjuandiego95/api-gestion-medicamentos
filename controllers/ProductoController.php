@@ -20,7 +20,7 @@ class ProductoController {
     //Registrar producto
     public function registrar() {
         $data = json_decode(file_get_contents('php://input'), true);
-        $required = ['codigo','nombre','laboratorio'];
+        $required = ['codigo','nombre','descripcion','estado','laboratorio'];
         foreach($required as $r) {
             if (empty($data[$r])) {
                 http_response_code(400);

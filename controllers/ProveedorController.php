@@ -19,7 +19,7 @@ class ProveedorController {
     //registrar proveedor
     public function registrar() {
         $data = json_decode(file_get_contents('php://input'), true);
-        $required = ['tipo_identificacion','numero_identificacion','razon_social'];
+        $required = ['tipo_identificacion','numero_identificacion','razon_social','direccion','nombre_contacto','celular', 'actividad_economica'];
         foreach($required as $r) {
             if (empty($data[$r])) {
                 http_response_code(400);
@@ -50,7 +50,7 @@ class ProveedorController {
     }
 
 
-    // ✅ Actualizar proveedor
+    //Actualizar proveedor
     public function actualizar() {
         $data = json_decode(file_get_contents('php://input'), true);
 

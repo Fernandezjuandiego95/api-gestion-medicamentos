@@ -22,7 +22,7 @@ class Recepcion {
     
     //Listar proveedor
     public function listar() {
-        $query = "SELECT r.*, p.nombre AS producto, pr.razon_social AS proveedor
+        $query = "SELECT r.*, p.nombre AS producto, pr.nombre_contacto AS proveedor
             FROM {$this->table_recepciones} r
             JOIN productos p ON r.id_producto = p.id
             JOIN proveedores pr ON r.id_proveedor = pr.id

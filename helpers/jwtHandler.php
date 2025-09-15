@@ -5,7 +5,7 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 class JwtHandler {
-    private static $secret_key = '2323';
+    private static $secret_key = '12345';
     private static $codigo = 'HS256';
     private static $exp_seconds = 3600;
 

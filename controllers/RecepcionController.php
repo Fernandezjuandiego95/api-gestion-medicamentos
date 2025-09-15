@@ -20,7 +20,7 @@ class RecepcionController {
     //Registrar recepcion
     public function registrar() {
         $data = json_decode(file_get_contents('php://input'), true);
-        $required = ['numero_factura','cantidad','id_producto','id_proveedor'];
+        $required = ['numero_factura','cantidad','lote','registro_invima','descripcion_estado_producto','id_producto','id_proveedor'];
         foreach($required as $r) {
             if (!isset($data[$r]) || $data[$r] === '') {
                 http_response_code(400);
